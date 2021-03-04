@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My Project 1 Page." />
+    <title>Project 1</title>
+
+    <link rel="stylesheet" href="../stylesheets/p1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../scripts/p1.js"></script>
+
+
+</head>
+<!-- Scripts-->
+
+<body>
+    <div class="container">
+        <div class="overlay">
+            <div id="overlay-cont">
+                <h1>INSTRUCTIONS:</h1>
+                <p>Make continous stuttering sounds, such as clapping, "popping", etc., to move Icarus across the scene.
+                </p>
+                <h2>Rules:</h2>
+                <ul>
+                    <li>Don't get too close to the sun.</li>
+                    <li>Watch out for the birds!</li>
+                </ul>
+                <button class="start" onclick="startGame();"><p>START</p></button>
+
+            </div>
+            <div id="overlay-bg">
+            </div>
+        </div>
+        <div class="rectangle">
+            <div class="background-container">
+
+                <div class="icarus-holder" id="icarus">
+                    <img class="icarus" src="../images/p1/icarus-2.png">
+                </div>
+                <img src="../images/p1/pajaro.gif" class="bird bird1" id="bird1">
+                <img src="../images/p1/pajaro.gif" class="bird bird2" id="bird2">
+                <img src="../images/p1/pajaro.gif" class="bird bird3" id="bird3">
+
+                <div class="sun centered" id="sun"></div>
+
+                <img src="../images/p1/cloud1.png" class="cloud1">
+                <img src="../images/p1/cloud2.png" class="cloud2">
+                <img src="../images/p1/cloud3.png" class="cloud3">
+                <img src="../images/p1/cloud1.png" class="cloud4">
+                <img src="../images/p1/cloud2.png" class="cloud5">
+                <img src="../images/p1/cloud3.png" class="cloud6">
+
+                <div class="timer-health-container">
+                    <progress id="health" class="inline-block-child" value="100" max="100"></progress>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

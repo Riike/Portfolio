@@ -1,0 +1,432 @@
+.body {
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  #tabmiddle {
+    height: 1500px;
+  }
+}
+
+.rectangle {  
+  max-width: inherit;
+  position: absolute;
+  height: 95%;
+  width: 95%;
+  border: 5px solid black;
+  overflow: hidden;
+  position: fixed;
+}
+
+.container {
+  align-items: center;
+  /* margin: 20px; */
+    background-color: #00bfff;
+
+    max-width: 600px;
+  }
+
+.background-container {
+  background-color: #00bfff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  display: inline-flex;
+  vertical-align: top;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: backgroundChange 10s linear infinte;
+  animation-name: backgroundChange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes backgroundChange {
+  0% {background-color: #00bfff;}
+  25%{background-color: #389fdb;}
+  50%{background-color: #99ccff;}
+  75%{background-color: #389fdb;}
+  100%{background-color: #00bfff;}
+}
+
+.background-container .icarus-holder {
+  position: relative;
+  animation: animate 0.2s ease infinite;
+  animation-name: animate;
+  animation-delay: 0.2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+  50% {
+    transform: translateX(-2px);
+  }
+  0%,
+  100% {
+    transform: translateY(2px);
+  }
+}
+.icarus-holder {
+  position: absolute;
+  /* starting position of icarus */
+  z-index: 20050;
+  top: 40%;
+  bottom: 0%;
+  left: -40%;
+  width: 18%;
+  height: 15%;
+  white-space: nowrap;
+  display: block;
+}
+/* .background-container .icarus-holder::before {
+  content: "";
+  position: absolute;
+  bottom: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 150px;
+  /* background: linear-gradient(#00bfff, transparent); 
+  display: flex;
+} */
+
+/* .background-container .icarus-holder::after {
+  content: "";
+  position: absolute;
+  bottom: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 150px;
+  /* background: linear-gradient(#00bfff, transparent); */
+  /* filter: blur(); 
+} */
+
+.background-container i {
+  position: absolute;
+  top: -250px;
+  background: red(255, 255, 255, 0.5);
+  animation: animateSky linear infinite;
+}
+
+@keyframes animateSky {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+.timer-health-container {
+  position: absolute;
+  padding: 10px;
+  height: 10%;
+  width: 80%;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.inline-block-child {
+  display: inline-block;
+}
+
+progress {
+  width: 100%;
+  display: block; /* default: inline-block */
+  /* margin: 2px; */
+  padding: 3px;
+  border: 1px solid white;
+  background: none;
+  border-radius: 14px;
+}
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: orange;
+}
+/* webkit */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  progress {
+    height: 25px;
+  }
+}
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+progress::-webkit-progress-value {
+  border-radius: 12px;
+  background: orange;
+}
+
+.sun {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  z-index: 20000; 
+  background-color: #ffde00;
+  box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
+    0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+  border-radius: 50%;
+  animation: sunrise 2s infinite linear forwards, rays 2s 2s infinte linear;
+  -webkit-animation: sunrise 2s infinite linear forwards,
+    rays 2s 2s infinte linear;
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation-name: sunrise, rays;
+  animation-duration: 2s, 2s;
+  animation-iteration-count: infinite, 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0ms, 2s;
+
+  -webkit-animation-name: sunrise, rays;
+  -webkit-animation-duration: 2s, 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards, none;
+  -webkit-animation-delay: 0s, 2s;
+}
+
+@keyframes sunrise {
+  0% {
+    box-shadow: none;
+  }
+}
+@keyframes rays {
+  0% {
+    box-shadow: 0 0 0 0px #ffde0080, 0 0 0 20px #ffde0040, 0 0 0 40px #ffde0020,
+      0 0 0 60px #ffde0010, 0 0 0 80px #ffde0000, 0 0 40px 100px #ffde0010;
+  }
+  100% {
+    shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
+      0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+  }
+}
+@-webkit-keyframes sunrise {
+  0% {
+    -webkit-box-shadow: none;
+  }
+}
+@-webkit-keyframes rays {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px #ffde0080, 0 0 0 20px #ffde0040,
+      0 0 0 40px #ffde0020, 0 0 0 60px #ffde0010, 0 0 0 80px #ffde0000,
+      0 0 40px 100px #ffde0010;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040,
+      0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000,
+      0 0 40px 100px #ffde0010;
+  }
+}
+
+.centered {
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cloud1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 600px;
+  z-index: 10000;
+  animation: animateCloud 10s linear infinite;
+  opacity: 0.4;
+}
+.cloud2 {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  max-width: 500px;
+  z-index: 10000;
+  animation: animateCloud 10s linear infinite;
+  opacity: 0.4;
+}
+.cloud3 {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  max-width: 600px;
+  z-index: 10000;
+  animation: animateCloud 8s linear infinite;
+  opacity: 0.4;
+}
+
+.cloud4 {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  max-width: 300px;
+  z-index: 10000;
+  animation: animateCloud 7s linear infinite;
+  animation-delay: -2s;
+  opacity: 0.4;
+}
+.cloud5 {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  max-width: 500px;
+  z-index: 10000;
+  animation: animateCloud 4s linear infinite;
+  animation-delay: -5s;
+  opacity: 0.4;
+}
+
+.cloud6 {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  max-width: 400px;
+  z-index: 10000;
+  animation: animateCloud 3s linear infinite;
+  animation-delay: -1s;
+  opacity: 0.4;
+}
+
+@keyframes animateCloud {
+  0% {
+    transform: translateX(-100%) scale(1);
+  }
+  100% {
+    transform: translateX(400%) scale(1.5);
+  }
+}
+
+.icarus {
+  width: 100%;
+  height: 100%;
+}
+
+.wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.wave1{
+  /* animation: animateWave 3s linear infinite; */
+  z-index: 10000;
+}
+.wave2{
+  animation: animateWave 3s linear infinite;
+  animation-delay: 2s;
+  z-index: 10000;
+  opacity: 0.5;
+  bottom: 8px;
+}
+.wave3{
+  animation: animateWave 4s linear infinite;
+  animation-delay: 5s;
+  z-index: 10000;
+  opacity: 0.2;
+  bottom: 10px;
+}
+.wave4{
+  animation: animateWave 5s linear infinite;
+  animation-delay: 3s;
+  z-index: 10000;
+  opacity: 0.7;
+}
+
+@keyframes animateWave{
+  0% {
+    transform: translateX(0%);
+  }
+  50%{
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.bird{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  z-index: 20050;
+  /* animation: animateBird 2s linear infinite; */
+}
+.bird1{
+  width: 10%;
+  height: 10%;
+  top: 20%;
+  z-index: 20050;
+  animation: animateBird 4s linear infinite;
+}
+.bird2{
+  width: 10%;
+  height: 10%;
+  top: 60%;
+  z-index: 20050;
+  animation: animateBird 3s linear infinite;
+}
+.bird3{
+  width: 10%;
+  height: 10%;
+  top: 80%;
+  z-index: 20050;
+  animation: animateBird 2s linear infinite;
+}
+
+@keyframes animateBird {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -20%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9990;
+  display: block;
+}
+
+#overlay-cont {
+  position: absolute;
+  top :40px;
+  left: 50px;
+  z-index: 9990;
+  display: block;
+}
+
+#overlay-bg {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  Width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9980;
+  align-items: center;
+}
+
+.start{
+  position: absolute;
+  left: 25%;
+  top: 100%;
+  background-color: goldenrod;
+  border: 1px solid white;
+  
+  width: 200px;
+  height: 100px;
+  color: gainsboro;
+  font-size: larger;
+  
+}

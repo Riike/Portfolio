@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>The Relationship - Rhys</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../stylesheets/p2.css" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="content-container">
+      <div class="active-users-panel" id="active-user-container">
+        <h3 class="panel-title">Active Users:</h3>
+      </div>
+      <div class="video-chat-container">
+        <h2 class="talk-info" id="talking-with-info">
+          Select active user on the left menu.
+        </h2>
+        <div class="video-container">
+          <div id="liveRemoteView">
+            <div id="peekaboo"></div>
+            <canvas id="canvas-rhys"></canvas>
+            <video autoplay class="remote-video" id="remote-video"></video>
+          </div>
+          <div id="liveLocalView">
+            <video autoplay muted class="local-video" id="local-video"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <!-- Load Posenet -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="../scripts/p2.js"></script>
+  <script src="https://kit.fontawesome.com/626aff5966.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

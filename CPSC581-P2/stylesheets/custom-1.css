@@ -1,0 +1,29 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.one {
+  color: #efdcbc;
+}
+
+.two {
+  color: #92beff;
+}
+.three {
+  color: #ff9999;
+  background-color: #ff9999;
+}
+
+.four {
+  color: #3b1592;
+  background-color: #3b1592;
+}

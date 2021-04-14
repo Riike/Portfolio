@@ -1,0 +1,221 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#demo-container{
+    display: flex;
+    justify-content: center;
+}
+#zoom {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 700px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#miro {
+  position: absolute;
+  top: 163px;
+  left: 446px;
+  width: 671px;
+  height: 496px;
+  object-fit: none;
+}
+
+#recipe {
+  position: absolute;
+  top: 163px;
+  left: 446px;
+  width: 671px;
+  height: 497px;
+  object-fit: contain;
+}
+
+#HijackButton {
+  width: 150px;
+  margin: 0px;
+  position: absolute;
+  top: 676px;
+  left: 846px;
+  -webkit-animation: bounce .3s  alternate;
+  -moz-animation: bounce .3s  alternate;
+  animation: bounce .3s  alternate;
+  -webkit-animation-iteration-count: 2;
+  -moz-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes bounce {
+    to { -webkit-transform: scale(1.2); }
+  }
+  @-moz-keyframes bounce {
+    to { -moz-transform: scale(1.2); }
+  }
+  @keyframes bounce {
+    to { transform: scale(1.2); }
+  }
+  
+.default {
+  background-color: #f79f79;
+  padding: 15px 32px;
+  width: 150px;
+  height: 100px;
+  border-radius: 25px;
+  border: none;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.hijacked {
+  position: absolute;
+  top: -552px;
+  left: -400px;
+  width: 900px;
+  height: 585px;
+  background: none;
+  border-radius: 0px;
+  border: 4px solid #f79f79;
+}
+
+#button {
+  transition: all ease 1s;
+}
+
+
+#green-box {
+  position: absolute;
+  top: 127px;
+  left: 1129px;
+  height: 180px;
+  width: 202px;
+  margin-bottom: 15px;
+  border: 4px solid green;
+}
+
+#speech-box {
+  position: absolute;
+  top: 291px;
+  left: 1133px;
+  height: 20px;
+  width: 121px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: black;
+}
+
+#chef-bandit {
+  max-width: 85px;
+  max-height: 85px;
+  position: relative;
+  top: -5px;
+}
+
+#button-text {
+  display: block;
+  width: 206px;
+  position: relative;
+  font-size: large;
+  left: -388px;
+  top: -544px;
+  transition: color 3s;
+  visibility: hidden;
+}
+
+.notify {
+  color: white;
+}
+.person {
+  position: absolute;
+  width: 175px;
+  height: 150px;
+}
+
+.teacher {
+  top: 165px;
+  left: 1148px;
+}
+
+.man {
+  top: 358px;
+  left: 1150px;
+}
+
+.man-2 {
+  top: 557px;
+  left: 1150px;
+}
+
+.fas {
+  font-size: 30px;
+  position: absolute;
+  opacity: 0;
+}
+
+.blink {
+  animation: flash 1s linear infinite;
+  -moz-animation: flash 1s linear infinite; /* Firefox */
+  -webkit-animation: flash 1s linear infinite; /* Safari and Chrome */
+  -o-animation: flash 1s linear infinite;
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+@keyframes flash {
+  50% {
+    opacity: 100;
+  }
+}
+
+.fa-heart.one {
+  color: tomato;
+  top: 138px;
+  left: 1139px;
+}
+
+.fa-heart.two {
+    color: tomato;
+    top: 322px;
+    left: 1139px;
+  }
+
+.fa-question {
+    color: tomato;
+    top: 138px;
+    left: 1139px;
+}
+
+.fa-laugh {
+  color: yellow;
+  top: 518px;
+  left: 1139px;
+}
+
+.footer {
+    padding: 10px;
+	/* position: fixed; */
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	border-top: 2px solid black;
+	text-align: left;
+}
+
+ul {
+    white-space: nowrap;
+    list-style-type: none;
+    text-align: center;
+  }
+  
+ 
+  
